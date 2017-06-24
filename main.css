@@ -1,0 +1,77 @@
+body {
+  font-family: 'Frijole', cursive;
+}
+
+#album-view img {
+  border: 1px solid #6b7a8a;
+  margin: 5px;
+  padding: 5px;
+  height: 150px;
+}
+
+#modal-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-view img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#modal-view.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+#album-view img {
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-prev {
+  animation: slide-from-left 0.5s;
+}
+
+@keyframes slide-from-left {
+  from {
+    margin-left: -200%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.animate-next {
+  animation: slide-from-right 0.5s;
+}
+
+@keyframes slide-from-right {
+  from {
+    margin-left: 200%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
